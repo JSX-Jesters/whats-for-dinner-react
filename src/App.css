@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -14,13 +15,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #c9cef2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -35,4 +34,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.img-fluid{
+  height: auto;
+  max-width: 80%;
+}
+
+body{
+  background-color: #c9cef2;
+}
+h1, h2{
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btn{
+  background-color: #49BEB6;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 3vw;
+}
+
+.btn:hover{
+  background-color: #065F63;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
 }
