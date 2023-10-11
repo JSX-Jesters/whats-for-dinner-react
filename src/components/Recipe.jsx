@@ -52,10 +52,10 @@ function Recipe({ meal1Name, meal2Name }) {
 				// Set the recipe content and make it visible based on meal number
 				if (mealNumber === 1) {
 					setMeal1Recipe(recipeContent);
-					setIsMeal1Visible(true);
+					setIsMeal1Visible(!isMeal1Visible);
 				} else {
 					setMeal2Recipe(recipeContent);
-					setIsMeal2Visible(true);
+					setIsMeal2Visible(!isMeal2Visible);
 				}
 			}
 		} catch (error) {
