@@ -3,7 +3,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import placeImage from "../images/placeholder.png";
-import axios from "axios"; // Axios for making API requests
+import axios from "axios";
+import FoodOption from "./FoodOption";
 import Recipe from "./Recipe";
 
 function HomePage() {
@@ -12,11 +13,16 @@ function HomePage() {
 	const [meal2Image, setMeal2Image] = useState(placeImage);
 	const [meal1Name, setMeal1Name] = useState("Meal 1"); // Default meal name
 	const [meal2Name, setMeal2Name] = useState("Meal 2");
+	const [meal1Recipe, setMeal1Recipe] = useState("");
+	const [meal2Recipe, setMeal2Recipe] = useState("");
+	const [mealsSelected, setMealsSelected] = useState(0);
 
 	// Function to handle the "Start" button click
 	const handleStartClick = async () => {
 		try {
-			// Fetch random meals from the API
+			// On Start Click count is reset to 0.
+			setMealsSelected(0);
+			// API requests to get random meal images
 			const response1 = await axios.get(
 				"https://www.themealdb.com/api/json/v1/1/random.php"
 			);
@@ -34,13 +40,53 @@ function HomePage() {
 			const meal2NameUrl = mealData2.strMeal || "Meal 2";
 			const meal2ImageUrl = mealData2.strMealThumb || placeImage;
 
-			// Update the state with the fetched meal data
+			// Extract Recipe from API responses
+			const meal1Recipe = response1.data.meals[0]?.strInstructions;
+			const meal2Recipe = response2.data.meals[0]?.strInstructions;
+
+			// Update state to display the fetched images
 			setMeal1Image(meal1ImageUrl);
 			setMeal1Name(meal1NameUrl);
 			setMeal2Image(meal2ImageUrl);
 			setMeal2Name(meal2NameUrl);
+			setMeal1Recipe(meal1Recipe);
+			setMeal2Recipe(meal2Recipe);
 		} catch (error) {
 			console.error("Error fetching meal images:", error);
+		}
+	};
+
+	const handleMealClick = async (mealId) => {
+		try {
+			// Retrieve Random Meal from API
+			const meal = await axios.get(
+				"https://www.themealdb.com/api/json/v1/1/random.php"
+			);
+
+			// Retrieve Image from Meal
+			const mealImageUrl = meal.data.meals[0]?.strMealThumb;
+			// Retrieve Image from Meal
+			const mealNameUrl = meal.data.meals[0]?.strMeal;
+
+			if (mealId === 1) {
+				setMeal2Image(mealImageUrl);
+				setMeal2Name(mealNameUrl);
+			} else if (mealId === 2) {
+				setMeal1Image(mealImageUrl);
+				setMeal1Name(mealNameUrl);
+			}
+
+			setMealsSelected(mealsSelected + 1);
+			// if mealsSelected > 3: display recipe for last selection
+			if (mealsSelected >= 3) {
+				let thisGuy = meal1Name;
+				if (mealId === 2) {
+					thisGuy = meal2Name;
+				}
+				alert(`Looks like you're having ${thisGuy} for dinner`);
+			}
+		} catch (error) {
+			console.error("Error fetching meal image:", error);
 		}
 	};
 
@@ -50,25 +96,23 @@ function HomePage() {
 			<button className="btn btn-primary" onClick={handleStartClick}>
 				Start
 			</button>
-
+			<h3>Choices: {mealsSelected}</h3>
 			<Row>
 				{/* Display the first meal's name and image */}
 				<Col md={6} className="mb-3">
-					<h2>{meal1Name}</h2>
-					<img
-						src={meal1Image}
-						alt=""
-						style={{ maxHeight: "300px" }}
+					<FoodOption
+						name={meal1Name}
+						url={meal1Image}
+						handleClick={() => handleMealClick(1)}
 					/>
 				</Col>
 
 				{/* Display the second meal's name and image */}
 				<Col md={6} className="mb-3">
-					<h2>{meal2Name}</h2>
-					<img
-						src={meal2Image}
-						alt=""
-						style={{ maxHeight: "300px" }}
+					<FoodOption
+						name={meal2Name}
+						url={meal2Image}
+						handleClick={() => handleMealClick(2)}
 					/>
 				</Col>
 			</Row>
