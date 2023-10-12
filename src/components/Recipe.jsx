@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import axios from "axios";
-import { useState } from "react";
 
 function Recipe({ meal1Name, meal2Name }) {
 	// State for meal recipes and visibility
@@ -24,11 +24,9 @@ function Recipe({ meal1Name, meal2Name }) {
 				`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`
 			);
 
-			// Logging the API response and meal name
 			console.log("API Response", response.data);
 			console.log("meal name: ", mealName);
 
-			// If the response contains meals data, process it
 			if (response.data.meals && response.data.meals.length > 0) {
 				const meal = response.data.meals[0];
 				const mealName = meal.strMeal;
@@ -45,17 +43,16 @@ function Recipe({ meal1Name, meal2Name }) {
 				}
 
 				// Create the recipe content
-				const recipeContent = `${mealName}\n\n${mealInstructions}\n\nIngredients:\n${ingredients.join(
+				const recipeContent = `\n${mealInstructions}\n\nIngredients:\n${ingredients.join(
 					"\n"
 				)}`;
 
-				// Set the recipe content and make it visible based on meal number
 				if (mealNumber === 1) {
 					setMeal1Recipe(recipeContent);
-					setIsMeal1Visible(!isMeal1Visible);
+					setIsMeal1Visible(true);
 				} else {
 					setMeal2Recipe(recipeContent);
-					setIsMeal2Visible(!isMeal2Visible);
+					setIsMeal2Visible(true);
 				}
 			}
 		} catch (error) {
@@ -96,7 +93,11 @@ function Recipe({ meal1Name, meal2Name }) {
 			{meal1Recipe && isMeal1Visible && (
 				<div>
 					<h2>{meal1Name} Recipe</h2>
-					<p>{meal1Recipe}</p>
+					<p>
+						{meal1Recipe.split("\n").map((paragraph, index) => (
+							<p key={index}>{paragraph}</p>
+						))}
+					</p>
 				</div>
 			)}
 
@@ -104,7 +105,11 @@ function Recipe({ meal1Name, meal2Name }) {
 			{meal2Recipe && isMeal2Visible && (
 				<div>
 					<h2>{meal2Name} Recipe</h2>
-					<p>{meal2Recipe}</p>
+					<p>
+						{meal2Recipe.split("\n").map((paragraph, index) => (
+							<p key={index}>{paragraph}</p>
+						))}
+					</p>
 				</div>
 			)}
 		</div>
