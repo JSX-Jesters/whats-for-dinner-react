@@ -89,11 +89,14 @@ function HomePage() {
 			console.error("Error fetching meal image:", error);
 		}
 	};
+	function changeLabel() {
+		document.querySelector("button").innerHTML = "Reshuffle!";
+	}
 
 	return (
 		<Container>
 			{/* Button to start and fetch random meals */}
-			<button className="btn btn-primary" onClick={handleStartClick}>
+			<button className="btn btn-primary" onClick={function(event){handleStartClick(); changeLabel()}}>
 				Start
 			</button>
 			<h3>Choices: {mealsSelected}</h3>

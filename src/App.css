@@ -2,16 +2,6 @@
 	text-align: center;
 }
 
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
 
 .App-header {
 	background-color: #83A1CB;
@@ -64,8 +54,8 @@ h3{
 
 .btn-primary {
 	background-color: #49beb6;
-	height: 50px;
-	width: 150px;
+	/* height: 50px;
+	width: 150px; */
 	border-radius: 10px;
 	font-weight: 500;
 	font-size: 3vw;
