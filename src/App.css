@@ -4,7 +4,7 @@
 
 
 .App-header {
-	background-color: #83A1CB;
+	background-color: #C1D8C3;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -31,7 +31,7 @@
 }
 
 body {
-	background-color: #83A1CB;
+	background-color: #C1D8C3;
 }
 /* headers */
 h1,
@@ -58,7 +58,7 @@ h3{
 	width: 150px; */
 	border-radius: 10px;
 	font-weight: 500;
-	font-size: 3vw;
+	font-size: 2vw;
 }
 
 .btn-primary:hover {
@@ -115,3 +115,5 @@ img{
 	padding-left: 40px;
 	padding-right: 40px;
 }
+
+
