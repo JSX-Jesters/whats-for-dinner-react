@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -6,6 +6,8 @@ import placeImage from "../images/placeholder.png";
 import axios from "axios";
 import FoodOption from "./FoodOption";
 import Recipe from "./Recipe";
+
+
 
 function HomePage() {
 	// State for meal images and names
@@ -93,7 +95,18 @@ function HomePage() {
 		document.querySelector("button").innerHTML = "Reshuffle!";
 	}
 
+	useEffect(() => {
+		const t = setTimeout(() =>{
+
+		}, 2000);
+		return () =>{
+			clearTimeout(t);
+		};
+	}, []);
+	
+
 	return (
+		
 		<Container>
 			{/* Button to start and fetch random meals */}
 			<button className="btn btn-primary" onClick={function(event){handleStartClick(); changeLabel()}}>
@@ -112,6 +125,7 @@ function HomePage() {
 
 				{/* Display the second meal's name and image */}
 				<Col md={6} className="mb-3">
+			
 					<FoodOption
 						name={meal2Name}
 						url={meal2Image}
