@@ -74,7 +74,7 @@ function Recipe({ meal1Name, meal2Name }) {
 	};
 
 	return (
-		<div>
+		<div className="recipe-display">
 			{/* Buttons for each meal */}
 			<button
 				className="btn show-recipe"
@@ -91,7 +91,7 @@ function Recipe({ meal1Name, meal2Name }) {
 
 			{/* Display the recipe content for Meal 1 if available and visible */}
 			{meal1Recipe && isMeal1Visible && (
-				<div>
+				<div className= "description">
 					<h2>{meal1Name} Recipe</h2>
 					<p>
 						{meal1Recipe.split("\n").map((paragraph, index) => (
@@ -103,7 +103,7 @@ function Recipe({ meal1Name, meal2Name }) {
 
 			{/* Display the recipe content for Meal 2 if available and visible */}
 			{meal2Recipe && isMeal2Visible && (
-				<div>
+				<div className= "description">
 					<h2>{meal2Name} Recipe</h2>
 					<p>
 						{meal2Recipe.split("\n").map((paragraph, index) => (
