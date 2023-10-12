@@ -49,10 +49,10 @@ function Recipe({ meal1Name, meal2Name }) {
 
 				if (mealNumber === 1) {
 					setMeal1Recipe(recipeContent);
-					setIsMeal1Visible(true);
+					setIsMeal1Visible(!isMeal1Visible);
 				} else {
 					setMeal2Recipe(recipeContent);
-					setIsMeal2Visible(true);
+					setIsMeal2Visible(!isMeal2Visible);
 				}
 			}
 		} catch (error) {
@@ -91,7 +91,7 @@ function Recipe({ meal1Name, meal2Name }) {
 
 			{/* Display the recipe content for Meal 1 if available and visible */}
 			{meal1Recipe && isMeal1Visible && (
-				<div className= "description">
+				<div className="description">
 					<h2>{meal1Name} Recipe</h2>
 					<p>
 						{meal1Recipe.split("\n").map((paragraph, index) => (
@@ -103,7 +103,7 @@ function Recipe({ meal1Name, meal2Name }) {
 
 			{/* Display the recipe content for Meal 2 if available and visible */}
 			{meal2Recipe && isMeal2Visible && (
-				<div className= "description">
+				<div className="description">
 					<h2>{meal2Name} Recipe</h2>
 					<p>
 						{meal2Recipe.split("\n").map((paragraph, index) => (
