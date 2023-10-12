@@ -14,7 +14,7 @@
 }
 
 .App-header {
-	background-color: #c9cef2;
+	background-color: #83A1CB;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -41,11 +41,17 @@
 }
 
 body {
-	background-color: #c9cef2;
+	background-color: #83A1CB;
 }
+/* headers */
 h1,
 h2 {
 	text-align: center;
+}
+h3{
+	color:#065f63;
+	font-weight: 900;
+	font-size: 2vw;
 }
 
 .row {
@@ -53,6 +59,8 @@ h2 {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+
+/* button design */
 
 .btn-primary {
 	background-color: #49beb6;
@@ -68,4 +76,52 @@ h2 {
 	color: white;
 	font-weight: 700;
 	border-radius: 5px;
+}
+
+.btn-select{
+	background-color: transparent;
+	border: none;
+	height: 40px;
+	width: 120px;
+	font-weight: 700;
+	font-size: 3vw;
+}
+.btn-select:hover{
+	background-color: transparent;
+	border: none;
+	color: green;
+	font-weight: 700;
+	font-size: 4vw;
+}
+
+.show-recipe{
+	background-color: #49beb6;
+	border-radius: 10px;
+	padding: 3px;
+
+}
+
+/* images on home page */
+
+img{
+	display: flex;
+	padding-top: 10px;
+}
+
+/* divs */
+
+.recipe-display{
+	padding-top: 2px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.description p{
+	color: white;
+	padding-left: 40px;
+	padding-right: 40px;
 }
