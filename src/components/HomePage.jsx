@@ -13,8 +13,8 @@ function HomePage() {
 	const [meal2Image, setMeal2Image] = useState(placeImage);
 	const [meal1Name, setMeal1Name] = useState("Meal 1"); // Default meal name
 	const [meal2Name, setMeal2Name] = useState("Meal 2");
-	const [meal1Recipe, setMeal1Recipe] = useState("");
-	const [meal2Recipe, setMeal2Recipe] = useState("");
+	// const [meal1Recipe, setMeal1Recipe] = useState("");    // COMMENTING THESE OUT TO TROUBLESHOOT DEPLOYMENT
+	// const [meal2Recipe, setMeal2Recipe] = useState("");    // COMMENTING THESE OUT TO TROUBLESHOOT DEPLOYMENT
 	const [mealsSelected, setMealsSelected] = useState(0);
 
 	// Function to handle the "Start" button click
@@ -41,16 +41,17 @@ function HomePage() {
 			const meal2ImageUrl = mealData2.strMealThumb || placeImage;
 
 			// Extract Recipe from API responses
-			const meal1Recipe = response1.data.meals[0]?.strInstructions;
-			const meal2Recipe = response2.data.meals[0]?.strInstructions;
+			// const meal1Recipe = response1.data.meals[0]?.strInstructions;     // COMMENTING THESE OUT TO TROUBLESHOOT DEPLOYMENT
+			// const meal2Recipe = response2.data.meals[0]?.strInstructions;     // COMMENTING THESE OUT TO TROUBLESHOOT DEPLOYMENT
+
 
 			// Update state to display the fetched images
 			setMeal1Image(meal1ImageUrl);
 			setMeal1Name(meal1NameUrl);
 			setMeal2Image(meal2ImageUrl);
 			setMeal2Name(meal2NameUrl);
-			setMeal1Recipe(meal1Recipe);
-			setMeal2Recipe(meal2Recipe);
+			// setMeal1Recipe(meal1Recipe);        // COMMENTING THESE OUT TO TROUBLESHOOT DEPLOYMENT
+			// setMeal2Recipe(meal2Recipe);        // COMMENTING THESE OUT TO TROUBLESHOOT DEPLOYMENT
 		} catch (error) {
 			console.error("Error fetching meal images:", error);
 		}

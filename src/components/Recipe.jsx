@@ -29,7 +29,7 @@ function Recipe({ meal1Name, meal2Name }) {
 
 			if (response.data.meals && response.data.meals.length > 0) {
 				const meal = response.data.meals[0];
-				const mealName = meal.strMeal;
+				// const mealName = meal.strMeal;     // COMMENTING THESE OUT TO TROUBLESHOOT DEPLOYMENT
 				const mealInstructions = meal.strInstructions;
 
 				// Extract and format ingredients
