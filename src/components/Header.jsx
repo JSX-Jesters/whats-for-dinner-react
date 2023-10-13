@@ -10,8 +10,8 @@ function Header() {
 					alt="logo"
 					style={{ maxHeight: "100px" }}
 				/>
-				<h1> Hungry??</h1>
-				<h2>Lets Decide What to Eat!</h2>
+				<h1>HUNGRY?</h1>
+				<h2>Let's Decide What to Eat!</h2>
 			</header>
 		</div>
 	);

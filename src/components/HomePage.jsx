@@ -108,7 +108,7 @@ function HomePage() {
 		}
 	};
 	function changeLabel() {
-		document.querySelector("button").innerHTML = "Reshuffle!";
+		document.querySelector("button").innerHTML = "Reshuffle";
 	}
 
 	useEffect(() => {

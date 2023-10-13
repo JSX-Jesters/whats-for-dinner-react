@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 export default function FoodOption({ name, url, handleClick, hideButton, recipe }) {
   return (
     <>
-      <h2>{name}</h2>
+      <h3>{name}</h3>
       {/* Hides the tick button for Food Options when the winning meal is chosen */}
       {hideButton === true ? (
         <></>
@@ -26,7 +26,14 @@ export default function FoodOption({ name, url, handleClick, hideButton, recipe 
       </Row>
       {/* Recipe is truthy when final meal is chosen, therefore it is displayed */}
       {recipe ? (
+				<div className="description">
         <p>{recipe}</p>
+        <p>
+          {recipe.split("\n").map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </p>
+      </div>
       ) : (
         <></>
       )}

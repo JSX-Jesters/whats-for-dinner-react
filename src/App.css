@@ -2,9 +2,8 @@
 	text-align: center;
 }
 
-
 .App-header {
-	background-color: #C1D8C3;
+	background-color: #f7d379;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -31,17 +30,35 @@
 }
 
 body {
-	background-color: #C1D8C3;
+	background-color: #f7d379;
 }
-/* headers */
-h1,
+
+/* Text styling */
+h1 {
+	text-align: center;
+	font-family: 'Oi', serif;
+	font-weight: normal;
+	font-size: 11vw;
+	color: #075F64;
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+}
+
 h2 {
 	text-align: center;
+	font-family: 'Reenie Beanie', cursive;
+	font-size: 7vw;
+	color: #3fb5af;
+	margin-block-start: 0em;
+	margin-block-end: 0.5em;
 }
-h3{
+
+h3 {
 	color:#065f63;
+	font-family: 'Reenie Beanie', cursive;
 	font-weight: 900;
-	font-size: 2vw;
+	font-size: 4vw;
+	margin-block-end: 0.0em;
 }
 
 .row {
@@ -50,56 +67,69 @@ h3{
 	justify-content: space-around;
 }
 
-/* button design */
-
+/* Button for start/reshuffle */
 .btn-primary {
-	background-color: #49beb6;
-	/* height: 50px;
-	width: 150px; */
-	border-radius: 10px;
-	font-weight: 500;
-	font-size: 2vw;
+	font-family: 'Oi', serif;
+	font-weight: normal;
+	font-size: 3.5vw;
+	background-color: #f4a261;
+	color: #075F64;
+	height: 9vw;
+	width: 40vw;
+	border-radius: 30px;
 }
 
 .btn-primary:hover {
-	background-color: #065f63;
-	color: white;
-	font-weight: 700;
-	border-radius: 5px;
+	font-family: 'Oi', serif;
+	font-weight: normal;
+	font-size: 4vw;
+	background-color: #fc7c6f;
+	color: #075F64;
+	height: 9vw;
+	width: 40vw;
+	border-radius: 30px;
 }
 
+/* Button for choosing meal */
 .btn-select{
 	background-color: transparent;
 	border: none;
 	height: 40px;
 	width: 120px;
 	font-weight: 700;
-	font-size: 3vw;
+	font-size: 8vw;
 }
+
 .btn-select:hover{
 	background-color: transparent;
 	border: none;
-	color: green;
+	color: #fc7c6f;
 	font-weight: 700;
-	font-size: 4vw;
+	font-size: 8vw;
 }
 
+/* Button for showing/hiding the receipe */
 .show-recipe{
 	background-color: #49beb6;
-	border-radius: 10px;
-	padding: 3px;
+	font-family: 'Source Code Pro', monospace;
+	border-radius: 20px;
+	padding: 15px;
+	margin: 0.5em;
 
+}
+
+.show-recipe:hover{
+	background-color: #075F64;
+	color: #49beb6;
 }
 
 /* images on home page */
-
 img{
 	display: flex;
 	padding-top: 10px;
 }
 
 /* divs */
-
 .recipe-display{
 	padding-top: 2px;
 	display: flex;
@@ -111,9 +141,8 @@ img{
 }
 
 .description p{
+	font-family: 'Source Code Pro', monospace;
 	color: #065f63;
 	padding-left: 40px;
 	padding-right: 40px;
 }
-
-
