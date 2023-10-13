@@ -11,8 +11,8 @@ function HomePage() {
 	// State for meal images and names
 	const [meal1Image, setMeal1Image] = useState(placeImage); // Initialize with a placeholder image
 	const [meal2Image, setMeal2Image] = useState(placeImage);
-	const [meal1Name, setMeal1Name] = useState("Meal 1"); // Default meal name
-	const [meal2Name, setMeal2Name] = useState("Meal 2");
+	const [meal1Name, setMeal1Name] = useState("Will it be this one?"); // Default meal name
+	const [meal2Name, setMeal2Name] = useState("...or this one?");
 	const [meal1Recipe, setMeal1Recipe] = useState(""); 
 	const [meal2Recipe, setMeal2Recipe] = useState(""); 
 	const [mealsSelected, setMealsSelected] = useState(0);
@@ -38,12 +38,12 @@ function HomePage() {
 
 			// Extract meal data for the first meal
 			const mealData1 = response1.data.meals[0] || {};
-			const meal1NameUrl = mealData1.strMeal || "Meal 1";
+			const meal1NameUrl = mealData1.strMeal || "Will it be this one?";
 			const meal1ImageUrl = mealData1.strMealThumb || placeImage; // Use a placeholder image if not available
 
 			// Extract meal data for the second meal
 			const mealData2 = response2.data.meals[0] || {};
-			const meal2NameUrl = mealData2.strMeal || "Meal 2";
+			const meal2NameUrl = mealData2.strMeal || "...or this one?";
 			const meal2ImageUrl = mealData2.strMealThumb || placeImage;
 
 			// Extract Recipe from API responses

@@ -14,7 +14,8 @@ export default function FoodOption({ name, url, handleClick, hideButton, recipe 
             type="button"
             onClick={handleClick}
           >
-            ✓
+            THIS ONE!
+            {/* ✓ */}
           </button>
         </>
       )}

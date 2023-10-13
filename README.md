@@ -4,7 +4,7 @@
 
 This is going to help you make decisions when you're indecisive about what to have for your next meal - whether it's breakfast, lunch, dinner, or dessert! 
 
-You'll be presented with two random meal options, and you simply click the tick for your preferred choice. The selected meal then competes against another random option, and the process repeats until your choice is made for you!
+You'll be presented with two random meal options, and you simply click 'THIS ONE!' for your preferred choice. The selected meal then competes against another random option, and the process repeats until your choice is made for you!
 
 **Key Features:**
 

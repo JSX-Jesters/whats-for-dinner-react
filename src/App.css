@@ -97,18 +97,12 @@ h3 {
 	background-color: transparent;
 	border: none;
 	color: #fc7c6f;
-	height: 40px;
-	width: 120px;
-	font-weight: 700;
-	font-size: 4vw;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2vw;
 }
 
 .btn-select:hover{
-	background-color: transparent;
-	border: none;
 	color: #3fb5af;
-	font-weight: 700;
-	font-size: 4vw;
 }
 
 /* Button for showing/hiding the receipe */
