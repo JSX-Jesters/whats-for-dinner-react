@@ -2,19 +2,9 @@
 	text-align: center;
 }
 
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
 
 .App-header {
-	background-color: #83A1CB;
+	background-color: #C1D8C3;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -41,7 +31,7 @@
 }
 
 body {
-	background-color: #83A1CB;
+	background-color: #C1D8C3;
 }
 /* headers */
 h1,
@@ -64,11 +54,11 @@ h3{
 
 .btn-primary {
 	background-color: #49beb6;
-	height: 50px;
-	width: 150px;
+	/* height: 50px;
+	width: 150px; */
 	border-radius: 10px;
 	font-weight: 500;
-	font-size: 3vw;
+	font-size: 2vw;
 }
 
 .btn-primary:hover {
@@ -121,7 +111,9 @@ img{
 }
 
 .description p{
-	color: white;
+	color: #065f63;
 	padding-left: 40px;
 	padding-right: 40px;
 }
+
+
