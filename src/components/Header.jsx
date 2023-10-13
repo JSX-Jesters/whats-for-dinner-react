@@ -11,7 +11,7 @@ function Header() {
 					style={{ maxHeight: "100px" }}
 				/>
 				<h1>HUNGRY?</h1>
-				<h2>Let's Decide What to Eat!</h2>
+				<h2>LET'S DECIDE WHAT TO EAT!</h2>
 			</header>
 		</div>
 	);
