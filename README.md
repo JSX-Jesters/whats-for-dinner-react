@@ -4,14 +4,15 @@
 
 **Key Features:**
 
--   Get meal inspiration by comparing random food options (in progress).
--   Discover new recipes and cooking instructions when a meal is chosen five times consecutively (in progress).
+-   Get meal inspiration by comparing random food options.
+-   Discover new recipes and cooking instructions when a meal is chosen five times consecutively.
+-   Re-roll options if none of the presented meals appeal to you.
+-   Access recipe and ingredient details at any point (in progress).
 -   Filter food options by categories such as seafood, vegan, Italian, and more (in progress).
 -   Exclude specific ingredients for allergies or personal preferences (in progress).
 -   Include must-have ingredients for those craving something specific (in progress).
--   Re-roll options if none of the presented meals appeal to you (in progress).
 -   Explore a completely random food choice (in progress).
--   Access recipe and ingredient details at any point (in progress).
+
 
 Whether you're looking for culinary adventure or a quick meal decision, "What's for Dinner" has you covered. Enjoy the excitement of culinary randomness and expand your meal repertoire today!
 
