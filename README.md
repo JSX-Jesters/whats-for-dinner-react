@@ -1,38 +1,54 @@
 # What's for Dinner
 
-"What's for Dinner" is a fun and interactive React application that helps you make decisions when you're indecisive about what to have for your next meal, whether it's breakfast, lunch, or dinner. This app presents you with two random mealoptions, and you simply click on your preferred choice. The selected meal then competes against another random option, and the process repeats.
+*"What's for Dinner"* is a fun and interactive React application! 
+
+This is going to help you make decisions when you're indecisive about what to have for your next meal - whether it's breakfast, lunch, dinner, or dessert! 
+
+You'll be presented with two random meal options, and you simply click 'THIS ONE!' for your preferred choice. The selected meal then competes against another random option, and the process repeats until your choice is made for you!
 
 **Key Features:**
 
--   Get meal inspiration by comparing random food options.
--   Discover new recipes and cooking instructions when a meal is chosen five times consecutively.
--   Re-roll options if none of the presented meals appeal to you.
--   Access recipe and ingredient details at any point (in progress).
--   Filter food options by categories such as seafood, vegan, Italian, and more (in progress).
--   Exclude specific ingredients for allergies or personal preferences (in progress).
--   Include must-have ingredients for those craving something specific (in progress).
--   Explore a completely random food choice (in progress).
+-   Get meal inspiration by comparing random food options
+-   Discover new recipes and cooking instructions when a meal is chosen five times consecutively
+-   Re-roll options if none of the presented meals appeal to you
+-   Access recipe and ingredient details at any point (in progress)
+-   Filter food options by categories such as seafood, vegan, Italian, and more (in progress)
+-   Exclude specific ingredients for allergies or personal preferences (in progress)
+-   Include must-have ingredients for those craving something specific (in progress)
+-   Explore a completely random food choice (in progress) <!-- THIS IS COMPLETE, YEAH? -->
 
 
-Whether you're looking for culinary adventure or a quick meal decision, "What's for Dinner" has you covered. Enjoy the excitement of culinary randomness and expand your meal repertoire today!
+Whether you're looking for culinary adventure or just help with a quick meal decision, *"What's for Dinner"* has you covered. 
+
+Enjoy the excitement of culinary randomness and expand your meal repertoire today!
+
+<br>
 
 ---
 
-# Getting Started with Create React App
+# For those who want to play with this app:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*"What's for Dinner"* was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Some nice, easy instructions for building it yourself are below, but the basics we'd suggest you start with are:
 
-In the project directory, you can run:
+## The Important Scripts
+
+### `npm install`
+
+This will load the right dependencies so you can get started with *"What's for Dinner"* as the genius developer you are
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+And this one runs the app in the development mode.\
+It should open automatically for you, but if it doesn't, trying opening [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+It's clever, and the page will reload when you make - and save - changes.\
 You may also see any lint errors in the console.
+
+## Other Available Scripts
+
+And if you're not a total coding potato, there are a few other code snippets you can run in the terminal, such as:
 
 ### `npm test`
 
@@ -63,28 +79,10 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn React, check out the [React documentation](https://reactjs.org/), and as always:
 
-### Code Splitting
+# Have Fun and Get Cooking!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Love, 
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The JSX Jesters
